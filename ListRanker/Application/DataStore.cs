@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,8 +10,15 @@ namespace ListRanker.Application
 {
     public class DataStore : DbContext, IDataStore
     {
+
         DbSet<ItemPreference> ItemPreferences { get; set; }
         DbSet<ListItem> ListItems { get; set; }
+
+        private readonly IConfiguration configuration;
+        public DataStore(IConfiguration configuration)
+        {
+            this.configuration = configuration;
+        }
 
         public Task<List<ItemPreference>> GetItemPreferences()
         {
@@ -53,7 +62,7 @@ namespace ListRanker.Application
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql(Environment.GetEnvironmentVariable("db-connection"));
+            optionsBuilder.UseNpgsql(configuration.GetConnectionString("DefaultConnection"));
         }
     }
 }
