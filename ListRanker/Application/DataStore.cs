@@ -17,6 +17,7 @@ namespace ListRanker.Application
                 .Include(i => i.Item1)
                 .Include(i => i.Item2)
                 .ToListAsync();
+            //
         }
 
         public Task<(ListItem, ListItem)> GetTwoRandomItems()
