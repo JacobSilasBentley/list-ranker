@@ -1,0 +1,43 @@
+﻿@page "/ranks"
+@model ListRanker.Pages.RankModel
+
+<div class="d-flex justify-content-center container">
+    @if (Model.RankedList.Any()) 
+    { 
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>
+                        Position
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Score
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.RankedList)
+                {
+                    <tr>
+                        <td>
+                            @item.Position
+                        </td>
+                        <td>
+                            @item.Name
+                        </td>
+                        <td>
+                            @item.Rating.ToString("F2")
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <i class="text-muted text-white">There are currently no rankings available</i>
+    }
+</div>

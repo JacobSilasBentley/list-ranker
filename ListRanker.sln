@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListRanker", "ListRanker\ListRanker.csproj", "{25401957-3A39-47F7-9AAD-F8BF14E3D58B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieScraper", "MovieScraper\MovieScraper.csproj", "{6DAE0C7A-1120-4597-97AA-44DE68BA3A2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25401957-3A39-47F7-9AAD-F8BF14E3D58B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25401957-3A39-47F7-9AAD-F8BF14E3D58B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25401957-3A39-47F7-9AAD-F8BF14E3D58B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25401957-3A39-47F7-9AAD-F8BF14E3D58B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DAE0C7A-1120-4597-97AA-44DE68BA3A2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DAE0C7A-1120-4597-97AA-44DE68BA3A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DAE0C7A-1120-4597-97AA-44DE68BA3A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DAE0C7A-1120-4597-97AA-44DE68BA3A2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61F5862A-494B-439B-ADDF-194F16D8DC5B}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center h-75 d-flex flex-column justify-content-center">
+    <h1 class="text-white my-5">Select the Best...</h1>
+    <form method="post" class="d-flex flex-column align-items-center">
+        <input type="hidden" asp-for="@Model.ListItem1.ID" />
+        <input type="hidden" asp-for="@Model.ListItem1.Name" />
+        <input type="hidden" asp-for="@Model.ListItem2.ID" />
+        <input type="hidden" asp-for="@Model.ListItem2.Name" />
+        <div class="container d-md-flex">
+            <input type="submit" class="w-75 h-100 btn-warning p-3 p-sm-5 m-2 font-weight-bold" value="@Model.ListItem1.Name" asp-page-handler="Item1" />
+            <input type="submit" class="w-75 h-100 btn btn-warning p-3 p-sm-5 m-2 font-weight-bold" value="@Model.ListItem2.Name" asp-page-handler="Item2" />
+        </div>
+        <a href="/" class="btn btn-info p-3 m-4 font-weight-bold" value="Skip">Skip</a>
+    </form>
+</div>
